@@ -1,0 +1,24 @@
+# This is the docker compose file for the application.
+version: '3.8'
+
+services:
+  ############################################################
+  # This will run 3 applications in parallel. This will simulate one application
+  # that is scaled out to 3 instances.
+  # Your task will be to capture the logs written in STDOUT by each application,
+  # parse them and then visualize using a visualization tool of your choice.
+  app1:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+  app2:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+  app3:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+  ############################################################
+  # Your code starts here.
+  ############################################################
